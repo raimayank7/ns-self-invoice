@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://self-invoice.niveshsahayak.in/sitemap.xml
