@@ -53,7 +53,8 @@
     if (m) d.gstin = m[0];
     if (d.addr) splitAddr(d);
     if (d.type) d.reg = /compos/i.test(d.type) ? 'comp' : /sez/i.test(d.type) ? 'sez' : /regular|normal/i.test(d.type) ? 'regular' : '';
-    d.name = d.legal || d.trade || '';
+    /* a proprietor's legal name is the person; shops bill under the trade name */
+    d.name = (/propriet/i.test(d.constitution || '') && d.trade ? d.trade : d.legal) || d.trade || '';
     return d;
   };
   /* "Shop 4, Mall Road, Ludhiana, Ludhiana, Punjab, 141001" -> addr, city, state, pin */
@@ -116,12 +117,16 @@
       var warn = d.status && !/^active/i.test(d.status) ? '<p class="note bad">' + esc(t('gf.inactive', { s: d.status })) + '</p>' : '';
       out.innerHTML = warn + '<p class="soft">' + esc(t('gf.check')) + '</p><div class="fg">' +
         row('name', 'gf.name', d.name) +
-        (d.trade && d.trade !== d.legal ? '<p class="gf-alt wide"><button type="button" class="link" data-gf-trade>' + esc(t('gf.usetrade', { n: d.trade })) + '</button></p>' : '') +
+        (d.trade && d.legal && d.trade !== d.legal ? '<p class="gf-alt wide"><button type="button" class="link" data-gf-alt>' + esc(d.name === d.trade ? t('gf.uselegal', { n: d.legal }) : t('gf.usetrade', { n: d.trade })) + '</button></p>' : '') +
         row('addr', 'l.addr', d.addr) + row('city', 'l.city', d.city) + row('pin', 'l.pin', d.pin, 1) + '</div>' +
         '<ul class="gf-facts">' + [['gf.legal', d.legal], ['gf.trade', d.trade], ['gf.status', d.status], ['gf.type', d.type], ['gf.since', d.since], ['gf.const', d.constitution]]
           .filter(function (x) { return x[1]; }).map(function (x) { return '<li>' + esc(t(x[0])) + ': <b>' + esc(x[1]) + '</b></li>'; }).join('') + '</ul>';
-      var tb = out.querySelector('[data-gf-trade]');
-      if (tb) tb.onclick = function () { out.querySelector('#gf-name').value = d.trade; };
+      var tb = out.querySelector('[data-gf-alt]');
+      if (tb) tb.onclick = function () {
+        var nm = out.querySelector('#gf-name'), toTrade = nm.value !== d.trade;
+        nm.value = toTrade ? d.trade : d.legal;
+        tb.textContent = toTrade ? t('gf.uselegal', { n: d.legal }) : t('gf.usetrade', { n: d.trade });
+      };
       got = d; ok.disabled = false;
     }
     ta.addEventListener('input', read);

@@ -218,13 +218,13 @@
       fillForm(); suggestNumber(true); draw(); saveDraft();
     });
     NS.suggest($('#b-name', ed), function () { return NSStore.list('party'); }, function (x) { return x.name; }, function (p) {
-      doc.buyer = { name: p.name, addr: p.addr || '', city: p.city || '', pin: p.pin || '', state: p.state || '', gstin: p.gstin || '', phone: p.phone || '' };
+      doc.buyer = { name: p.name, addr: p.addr || '', city: p.city || '', pin: p.pin || '', state: p.state || '', gstin: p.gstin || '', phone: p.phone || '', legal: p.gst && p.gst.legal || '' };
       if (p.ship && p.ship.addr) doc.ship = { name: p.ship.name || p.name, addr: p.ship.addr, city: p.ship.city || '', pin: p.ship.pin || '', state: p.ship.state || p.state || '' };
       fillForm(); draw(); saveDraft();
     });
     if (NS.gstFetchButton) NS.gstFetchButton($('#b-gstin', ed), function (d) {
       var b = doc.buyer;
-      doc.buyer = { name: d.name, addr: d.addr || b.addr || '', city: d.city || b.city || '', pin: d.pin || b.pin || '', state: d.state || b.state || '', gstin: d.gstin, phone: b.phone || '' };
+      doc.buyer = { name: d.name, addr: d.addr || b.addr || '', city: d.city || b.city || '', pin: d.pin || b.pin || '', state: d.state || b.state || '', gstin: d.gstin, phone: b.phone || '', legal: d.legal || '' };
       fillForm(); draw(); saveDraft();
       NSStore.list('party').then(function (all) {
         var hit = all.filter(function (x) { return x.gstin === d.gstin; })[0] || all.filter(function (x) { return key(x.name) === key(d.name); })[0], want = T.buying ? 'supplier' : 'customer';

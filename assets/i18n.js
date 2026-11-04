@@ -326,7 +326,7 @@
     'gf.copied': 'GSTIN copied.', 'gf.none': 'We could not find the business name in this text. Copy the whole result page from the GST portal and paste it again.',
     'gf.other': 'This result is for another GSTIN ({g}). Search the GSTIN you typed.', 'gf.inactive': 'The GST portal shows this GSTIN as “{s}”. Check with the party before you bill them.',
     'gf.check': 'Check the details, change anything that is wrong, then press “Use these details”.', 'gf.name': 'Name on your documents',
-    'gf.usetrade': 'Use the trade name “{n}” instead', 'gf.legal': 'Legal name', 'gf.trade': 'Trade name', 'gf.status': 'Status', 'gf.type': 'Taxpayer type',
+    'gf.usetrade': 'Use the trade name “{n}” instead', 'gf.uselegal': 'Use the legal name “{n}” instead', 'gf.legal': 'Legal name', 'gf.trade': 'Trade name', 'gf.status': 'Status', 'gf.type': 'Taxpayer type',
     'gf.since': 'Registered on', 'gf.const': 'Type of business', 'gf.use': 'Use these details', 'gf.saved': '{n} saved to your customers and suppliers.'
   };
 
