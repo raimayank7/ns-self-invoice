@@ -312,7 +312,22 @@
     's.pt.manual': 'Professional tax for this state is not in our table yet. Type it on the Professional tax line.',
     's.pfbtn2': 'Work out PF, ESI, professional tax and TDS',
     's.h.pf2': 'PF 12% of basic (on basic up to ₹25,000); ESI 0.75% when gross is ₹21,000 or less; professional tax from the state chosen above; TDS from this month’s gross × 12 with the FY 2026-27 slabs and the standard deduction. Check them against your own rules.',
-    's.w.wages': 'Basic pay is less than half of gross. Under the labour codes the extra allowances count as wages for PF and gratuity.'
+    's.w.wages': 'Basic pay is less than half of gross. Under the labour codes the extra allowances count as wages for PF and gratuity.',
+
+    /* GSTIN details from the GST portal */
+    'gf.btn': 'Get name and address from this GSTIN', 'gf.title': 'Details from the GSTIN', 'gf.first': 'Type a full, correct GSTIN first.',
+    'gf.state': 'State', 'gf.holder': 'Registered as',
+    'gf.h.C': 'Company', 'gf.h.P': 'Individual or proprietor', 'gf.h.F': 'Partnership firm or LLP', 'gf.h.H': 'Hindu undivided family (HUF)', 'gf.h.A': 'Association of persons',
+    'gf.h.T': 'Trust', 'gf.h.B': 'Body of individuals', 'gf.h.L': 'Local authority', 'gf.h.J': 'Artificial juridical person', 'gf.h.G': 'Government',
+    'gf.s1': 'We copy the GSTIN for you and open the official GST portal search in a new tab.', 'gf.open': 'Copy GSTIN and open GST portal',
+    'gf.s2': 'There, paste the GSTIN, type the letters from the picture and press Search.',
+    'gf.s3': 'Select the whole result (on a phone: press and hold, then Select all), copy it, come back here and paste it below.',
+    'gf.paste': 'Paste the GST portal result here', 'gf.ph': 'Legal Name of Business … Trade Name … Principal Place of Business …',
+    'gf.copied': 'GSTIN copied.', 'gf.none': 'We could not find the business name in this text. Copy the whole result page from the GST portal and paste it again.',
+    'gf.other': 'This result is for another GSTIN ({g}). Search the GSTIN you typed.', 'gf.inactive': 'The GST portal shows this GSTIN as “{s}”. Check with the party before you bill them.',
+    'gf.check': 'Check the details, change anything that is wrong, then press “Use these details”.', 'gf.name': 'Name on your documents',
+    'gf.usetrade': 'Use the trade name “{n}” instead', 'gf.legal': 'Legal name', 'gf.trade': 'Trade name', 'gf.status': 'Status', 'gf.type': 'Taxpayer type',
+    'gf.since': 'Registered on', 'gf.const': 'Type of business', 'gf.use': 'Use these details', 'gf.saved': '{n} saved to your customers and suppliers.'
   };
 
   var packs = { en: EN }, cur = 'en';

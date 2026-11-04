@@ -222,6 +222,17 @@
       if (p.ship && p.ship.addr) doc.ship = { name: p.ship.name || p.name, addr: p.ship.addr, city: p.ship.city || '', pin: p.ship.pin || '', state: p.ship.state || p.state || '' };
       fillForm(); draw(); saveDraft();
     });
+    if (NS.gstFetchButton) NS.gstFetchButton($('#b-gstin', ed), function (d) {
+      var b = doc.buyer;
+      doc.buyer = { name: d.name, addr: d.addr || b.addr || '', city: d.city || b.city || '', pin: d.pin || b.pin || '', state: d.state || b.state || '', gstin: d.gstin, phone: b.phone || '' };
+      fillForm(); draw(); saveDraft();
+      NSStore.list('party').then(function (all) {
+        var hit = all.filter(function (x) { return x.gstin === d.gstin; })[0] || all.filter(function (x) { return key(x.name) === key(d.name); })[0], want = T.buying ? 'supplier' : 'customer';
+        var role = !hit || !hit.role ? want : hit.role === want || hit.role === 'both' ? hit.role : 'both';
+        return NSStore.put('party', Object.assign(hit || {}, { name: d.name, addr: doc.buyer.addr, city: doc.buyer.city, pin: doc.buyer.pin, state: doc.buyer.state, gstin: d.gstin, role: role, reg: d.reg || '',
+          gst: { legal: d.legal || '', trade: d.trade || '', status: d.status || '', type: d.type || '', since: d.since || '', checked: d.checked } }, hit && hit.phone ? {} : { phone: doc.buyer.phone }));
+      }).then(function () { NS.toast(t('gf.saved', { n: d.name })); }, function (err) { NS.toast(t('nosave', { e: err.message }), 'bad'); });
+    });
     ext('wire', ed);
   }
 
@@ -271,6 +282,7 @@
       if (doc.ship) Object.keys(SHMAP).forEach(function (id) { $('#' + id, ed).value = doc.ship[SHMAP[id]] || ''; });
       renderItems();
       ['s-gstin', 'b-gstin'].forEach(checkGstin);
+      $$('[data-gf]', ed).forEach(function (i) { i.dispatchEvent(new Event('gf-sync')); });
       ext('fill', ed);
     }
     $$('[data-accent]', ed).forEach(function (b) { b.setAttribute('aria-checked', String(b.getAttribute('data-accent') === doc.accent)); });
