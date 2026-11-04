@@ -603,7 +603,12 @@
     }).then(function (rec) {
       editingId = rec.id; saveDraft();
       /* an invoice made from a quotation marks that quotation "Invoice made" */
-      if (doc.fromId) NSStore.get('doc', doc.fromId).then(function (q) { if (q && q.status !== 'inv') { q.status = 'inv'; q.invNo = doc.no; return NSStore.put('doc', q); } }).catch(function () {});
+      if (doc.fromId) NSStore.get('doc', doc.fromId).then(function (q) {
+        /* an invoice marks it "Invoice made"; a sales order or challan made from it is noted on it (status unchanged) */
+        if (!q) return;
+        if (type === 'invoice') { if (q.status === 'inv') return; q.status = 'inv'; q.invNo = doc.no; } else { if (q.nextNo === doc.no) return; q.nextNo = doc.no; q.nextType = type; }
+        return NSStore.put('doc', q);
+      }).catch(function () {});
       NS.toast(tw('saved', { no: doc.no }));
       NS.folderWrite(false);
       NS.checkReminder();
@@ -713,7 +718,8 @@
       inv.seller = Object.assign(inv.seller, qd.seller); delete inv.seller.id; delete inv.seller.created; delete inv.seller.updated;
       inv.buyer = qd.buyer; inv.ship = qd.ship || null; inv.pos = qd.pos || ''; inv.items = qd.items; inv.notes = qd.notes || inv.notes;
       inv.round = qd.round !== false; inv.accent = qd.accent || inv.accent;
-      inv.kind = !inv.seller.gstin ? 'plain' : qd.withGst === false && !src.gstOff ? 'supply' : 'tax';
+      if (type === 'invoice') inv.kind = !inv.seller.gstin ? 'plain' : qd.withGst === false && !src.gstOff ? 'supply' : 'tax';
+      else if (T.gstFlag) inv.withGst = qd.withGst !== false;
       inv.ref = (NAMES[src.title || qd.kind] ? NAMES[src.title || qd.kind] + ' ' : '') + qd.no;
       inv.fromId = q.id;
       doc = inv; editingId = null;
@@ -760,8 +766,13 @@
     NSStore.ready().then(function () {
       return NSStore.meta('settings').then(function (c) { CFG = c || {}; }, function () {});
     }).then(function () {
-      var from = new URLSearchParams(location.search).get('from');
+      var qs = new URLSearchParams(location.search), from = qs.get('from'), open = qs.get('open');
       if (NS.leaving) return;   /* this page is moving to the visitor's language page, which reads ?from= itself */
+      /* ?open=<id>: the Nivesh Sahayak App opens a saved document here to edit, print or share */
+      if (open) {
+        history.replaceState(null, '', location.pathname + location.hash);
+        return NSStore.get('doc', open).then(function (rec) { if (rec && (rec.type || 'invoice') === type) { openDoc(rec, false); render(); } else NS.toast(t('conv.none'), 'bad'); }).catch(function () {});
+      }
       if (from) {
         history.replaceState(null, '', location.pathname + location.hash);
         return fromQuote(from).then(function (ok) { if (ok) { render(); saveDraft(); return suggestNumber(true); } });
