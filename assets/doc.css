@@ -231,3 +231,27 @@ details.more .fg{margin-top:8px}
 .rr-f p{margin:1px 0;color:#374151}.rr-f .signbox{margin:0;width:200px}
 .sh.petty .lines td,.sh.petty .lines th{font-size:11px}
 @media print{.sh.rent{padding:8mm 10mm}}
+/* many documents from Excel (bulk.js) */
+.bulk{margin-top:28px}
+.bulk>h2{font-family:var(--font-head);font-size:1.35rem;margin:0 0 6px}
+.bk-steps{display:grid;gap:12px}
+.bk-steps .card h3{font-family:var(--font-head);font-size:1.05rem;margin:0 0 8px}
+.bk-steps .row{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.bk-steps label.btn{cursor:pointer}
+.bk-out{margin-top:8px;font-size:.92rem;overflow-wrap:anywhere}
+.bk-out .warn,.bk-out ul.warn{color:var(--bad);font-weight:600}
+.bk-out .ok{color:var(--ok);font-weight:600}
+.tbl{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}
+.bk-t{width:100%;border-collapse:collapse;font-size:.88rem}
+.bk-t th,.bk-t td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:start;vertical-align:top}
+.bk-t .n{text-align:end;white-space:nowrap}
+.bk-t tr.bad td:first-child{box-shadow:inset 3px 0 0 var(--bad)}
+.bk-t tr.ok td:first-child{box-shadow:inset 3px 0 0 var(--ok)}
+.bk-t details ul{margin:4px 0 0;padding-inline-start:18px}
+.pb-t input,.pb-t select{min-width:7.5rem;width:100%}
+/* export and SEZ invoice block (export.js), on the printed sheet */
+.xp{margin:10px 0 0;padding:8px 10px;border:1px solid #D1D5DB;border-radius:6px;font-size:10.5px}
+.xp-end{margin:0 0 4px;font-weight:700;letter-spacing:.02em}
+.xp table{border-collapse:collapse}
+.xp th{text-align:left;font-weight:600;color:#4B5563;padding:1px 10px 1px 0;white-space:nowrap}
+.xp td{padding:1px 0}
