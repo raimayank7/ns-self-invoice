@@ -2081,5 +2081,8 @@ NS.addLang("or", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("or", {
   "nav.app": "Nivesh Sahayak ଆପ",
-  "hub.app": "ବାକି, ମିଳିଥିବା ଓ ଦେଇଥିବା ଟଙ୍କା, କିଣା, ଖର୍ଚ୍ଚ ଓ ପାର୍ଟି ଷ୍ଟେଟମେଣ୍ଟ, ସବୁ ଗୋଟିଏ ଜାଗାରେ"
+  "hub.app": "ବାକି, ମିଳିଥିବା ଓ ଦେଇଥିବା ଟଙ୍କା, କିଣା, ଖର୍ଚ୍ଚ ଓ ପାର୍ଟି ଷ୍ଟେଟମେଣ୍ଟ, ସବୁ ଗୋଟିଏ ଜାଗାରେ",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "ନୂଆ ଡକ୍ୟୁମେଣ୍ଟ",
+  "app.newtab": "ନୂଆ ଟ୍ୟାବରେ ଖୋଲନ୍ତୁ"
 });

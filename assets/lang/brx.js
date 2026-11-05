@@ -2213,5 +2213,8 @@ NS.addLang("brx", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("brx", {
   "nav.app": "Nivesh Sahayak एप",
-  "hub.app": "बाकि, मोननाय आरो होनाय रां, बायनाय, खरच आरो पार्टि स्टेटमेन्ट, गासैबो मोनसे जायगायाव"
+  "hub.app": "बाकि, मोननाय आरो होनाय रां, बायनाय, खरच आरो पार्टि स्टेटमेन्ट, गासैबो मोनसे जायगायाव",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "गोदान डकुमेन्ट",
+  "app.newtab": "गोदान टेबआव खेव"
 });

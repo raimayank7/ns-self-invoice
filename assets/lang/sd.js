@@ -2213,5 +2213,8 @@ NS.addLang("sd", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("sd", {
   "nav.app": "Nivesh Sahayak ايپ",
-  "hub.app": "بقايا، مليل ۽ ڏنل پئسا، خريداري، خرچ ۽ پارٽي اسٽيٽمينٽ، سڀ هڪ هنڌ"
+  "hub.app": "بقايا، مليل ۽ ڏنل پئسا، خريداري، خرچ ۽ پارٽي اسٽيٽمينٽ، سڀ هڪ هنڌ",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "نئون ڊاڪيومينٽ",
+  "app.newtab": "نئين ٽيب ۾ کوليو"
 });

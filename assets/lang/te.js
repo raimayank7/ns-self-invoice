@@ -2216,5 +2216,8 @@ NS.addLang("te", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("te", {
   "nav.app": "Nivesh Sahayak యాప్",
-  "hub.app": "బాకీలు, వచ్చిన మరియు ఇచ్చిన డబ్బు, కొనుగోళ్లు, ఖర్చులు, పార్టీ స్టేట్‌మెంట్ అన్నీ ఒకే చోట"
+  "hub.app": "బాకీలు, వచ్చిన మరియు ఇచ్చిన డబ్బు, కొనుగోళ్లు, ఖర్చులు, పార్టీ స్టేట్‌మెంట్ అన్నీ ఒకే చోట",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "కొత్త డాక్యుమెంట్",
+  "app.newtab": "కొత్త ట్యాబ్‌లో తెరవండి"
 });

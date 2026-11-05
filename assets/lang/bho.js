@@ -2213,5 +2213,8 @@ NS.addLang("bho", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("bho", {
   "nav.app": "Nivesh Sahayak ऐप",
-  "hub.app": "बकाया, मिलल आ दिहल पइसा, खरीद, खरचा आ पार्टी स्टेटमेंट, सब एक जगह"
+  "hub.app": "बकाया, मिलल आ दिहल पइसा, खरीद, खरचा आ पार्टी स्टेटमेंट, सब एक जगह",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "नया डॉक्यूमेंट",
+  "app.newtab": "नया टैब में खोलीं"
 });

@@ -2213,5 +2213,8 @@ NS.addLang("sat", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("sat", {
   "nav.app": "Nivesh Sahayak ᱮᱯ",
-  "hub.app": "ᱵᱟᱠᱤ, ᱧᱟᱢ ᱟᱨ ᱮᱢ ᱴᱟᱠᱟ, ᱠᱤᱨᱤᱧ, ᱠᱷᱚᱨᱚᱪ ᱟᱨ ᱯᱟᱨᱴᱤ ᱥᱴᱮᱴᱢᱮᱱᱴ, ᱡᱚᱛᱚ ᱢᱤᱫ ᱴᱷᱟᱶ ᱨᱮ"
+  "hub.app": "ᱵᱟᱠᱤ, ᱧᱟᱢ ᱟᱨ ᱮᱢ ᱴᱟᱠᱟ, ᱠᱤᱨᱤᱧ, ᱠᱷᱚᱨᱚᱪ ᱟᱨ ᱯᱟᱨᱴᱤ ᱥᱴᱮᱴᱢᱮᱱᱴ, ᱡᱚᱛᱚ ᱢᱤᱫ ᱴᱷᱟᱶ ᱨᱮ",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "ᱱᱟᱶᱟ ᱰᱚᱠᱩᱢᱮᱱᱴ",
+  "app.newtab": "ᱱᱟᱶᱟ ᱴᱮᱵ ᱨᱮ ᱡᱷᱤᱡᱽ ᱢᱮ"
 });

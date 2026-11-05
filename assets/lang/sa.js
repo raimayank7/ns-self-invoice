@@ -2213,5 +2213,8 @@ NS.addLang("sa", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("sa", {
   "nav.app": "Nivesh Sahayak ऐप",
-  "hub.app": "शेषदेयं, प्राप्तं दत्तं च धनं, क्रयः, व्ययाः, पक्ष-स्टेटमेंट च, सर्वम् एकत्र"
+  "hub.app": "शेषदेयं, प्राप्तं दत्तं च धनं, क्रयः, व्ययाः, पक्ष-स्टेटमेंट च, सर्वम् एकत्र",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "नूतनं प्रपत्रम्",
+  "app.newtab": "नूतने टैब्-मध्ये उद्घाटयतु"
 });

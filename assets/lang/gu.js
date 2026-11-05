@@ -2213,5 +2213,8 @@ NS.addLang("gu", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("gu", {
   "nav.app": "Nivesh Sahayak ઍપ",
-  "hub.app": "બાકી, મળેલા અને આપેલા પૈસા, ખરીદી, ખર્ચ અને પાર્ટી સ્ટેટમેન્ટ, બધું એક જગ્યાએ"
+  "hub.app": "બાકી, મળેલા અને આપેલા પૈસા, ખરીદી, ખર્ચ અને પાર્ટી સ્ટેટમેન્ટ, બધું એક જગ્યાએ",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "નવો ડોક્યુમેન્ટ",
+  "app.newtab": "નવા ટેબમાં ખોલો"
 });

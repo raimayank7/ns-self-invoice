@@ -2213,5 +2213,8 @@ NS.addLang("hi", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("hi", {
   "nav.app": "Nivesh Sahayak ऐप",
-  "hub.app": "बकाया, मिला और दिया पैसा, खरीद, खर्चे और पार्टी स्टेटमेंट, सब एक जगह"
+  "hub.app": "बकाया, मिला और दिया पैसा, खरीद, खर्चे और पार्टी स्टेटमेंट, सब एक जगह",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "नया डॉक्यूमेंट",
+  "app.newtab": "नए टैब में खोलें"
 });

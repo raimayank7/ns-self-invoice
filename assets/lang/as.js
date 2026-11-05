@@ -2213,5 +2213,8 @@ NS.addLang("as", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("as", {
   "nav.app": "Nivesh Sahayak এপ",
-  "hub.app": "বাকী, পোৱা আৰু দিয়া টকা, কিনা, খৰচ আৰু পাৰ্টী ষ্টেটমেণ্ট, সকলো এঠাইত"
+  "hub.app": "বাকী, পোৱা আৰু দিয়া টকা, কিনা, খৰচ আৰু পাৰ্টী ষ্টেটমেণ্ট, সকলো এঠাইত",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "নতুন ডকুমেণ্ট",
+  "app.newtab": "নতুন টেবত খোলক"
 });

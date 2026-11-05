@@ -2213,5 +2213,8 @@ NS.addLang("kok", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("kok", {
   "nav.app": "Nivesh Sahayak ॲप",
-  "hub.app": "येणें-देणें, मेळिल्ले आनी दिल्ले पयशे, खरेदी, खर्च आनी पार्टी स्टेटमेंट, सगळें एके सुवातेर"
+  "hub.app": "येणें-देणें, मेळिल्ले आनी दिल्ले पयशे, खरेदी, खर्च आनी पार्टी स्टेटमेंट, सगळें एके सुवातेर",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "नवें डॉक्युमेंट",
+  "app.newtab": "नव्या टॅबांत उगडात"
 });

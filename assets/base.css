@@ -157,3 +157,8 @@ dialog::backdrop{background:rgba(5,12,20,.55)}
 .gf-alt{margin:-4px 0 0;grid-column:1/-1}
 .gf-btn{display:inline-block;margin-top:4px;font-weight:600}
 @media (max-width:520px){.gf-dlg .fg{grid-template-columns:1fr}}
+
+/* shown inside the Nivesh Sahayak App (html.embed, set at first paint when the page is in a frame): only the tool */
+html.embed .hd,html.embed .ft,html.embed .remind,html.embed .skip,html.embed [data-guide-en],html.embed .sponsor-slot{display:none!important}
+html.embed #main>*:not(#tool):not(#my-app):not(dialog):not(script){display:none!important}
+html.embed #main>#tool,html.embed #main>#my-app{margin-top:12px}

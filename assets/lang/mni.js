@@ -2082,5 +2082,8 @@ NS.addLang("mni", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("mni", {
   "nav.app": "Nivesh Sahayak ꯑꯦꯞ",
-  "hub.app": "ꯂꯦꯃꯍꯧꯔꯤꯕ, ꯐꯪꯈꯤꯕ ꯑꯃꯁꯨꯡ ꯄꯤꯈꯤꯕ ꯁꯦꯟ, ꯂꯧꯕ, ꯁꯦꯟꯊꯣꯛ ꯑꯃꯁꯨꯡ ꯄꯥꯔꯇꯤ ꯁ꯭ꯇꯦꯇꯃꯦꯟꯠ ꯄꯨꯝꯅꯃꯛ ꯃꯐꯝ ꯑꯃꯗ"
+  "hub.app": "ꯂꯦꯃꯍꯧꯔꯤꯕ, ꯐꯪꯈꯤꯕ ꯑꯃꯁꯨꯡ ꯄꯤꯈꯤꯕ ꯁꯦꯟ, ꯂꯧꯕ, ꯁꯦꯟꯊꯣꯛ ꯑꯃꯁꯨꯡ ꯄꯥꯔꯇꯤ ꯁ꯭ꯇꯦꯇꯃꯦꯟꯠ ꯄꯨꯝꯅꯃꯛ ꯃꯐꯝ ꯑꯃꯗ",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "ꯑꯅꯧꯕ ꯗꯣꯀꯨꯃꯦꯟꯇ",
+  "app.newtab": "ꯇꯦꯕ ꯑꯅꯧꯗ ꯍꯥꯡꯗꯣꯛꯎ"
 });

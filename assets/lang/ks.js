@@ -2214,5 +2214,8 @@ NS.addLang("ks", {
 /* links to the Nivesh Sahayak App */
 NS.addLang("ks", {
   "nav.app": "Nivesh Sahayak ایپ",
-  "hub.app": "بقایا، مِلمٕتۍ تہٕ دِژمٕتۍ پونسہٕ، خریداری، خرچ تہٕ پارٹی اسٹیٹمنٹ، سورُے اَکِس جاے"
+  "hub.app": "بقایا، مِلمٕتۍ تہٕ دِژمٕتۍ پونسہٕ، خریداری، خرچ تہٕ پارٹی اسٹیٹمنٹ، سورُے اَکِس جاے",
+  /* the app shell: documents open inside the app */
+  "app.newdoc": "نوٚو ڈاکیومنٹ",
+  "app.newtab": "نوِس ٹیبس منٛز کھولِو"
 });
